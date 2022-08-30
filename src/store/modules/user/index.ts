@@ -2,15 +2,6 @@ import { defineStore } from "pinia";
 
 import { UserState } from "./types";
 
-/**
- *   userId?: string;
- phone?: string;
- userName?: string;
- nikeName?: string;
- avatar?: string;
- token?: string;
- role?: RoleType;
- */
 export const useUserStore = defineStore("user", {
   state: (): UserState => ({
     userId: undefined,

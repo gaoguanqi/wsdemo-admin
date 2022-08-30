@@ -4,11 +4,21 @@ import vue from "@vitejs/plugin-vue";
 import autoprefixer from "autoprefixer";
 import postCssPxToRem from "postcss-pxtorem";
 
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
+
 import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    createSvgIconsPlugin({
+      // 指定要缓存的文件夹
+      iconDirs: [resolve(process.cwd(), "src/assets/svg")],
+      // 指定symbolId格式
+      symbolId: "[name]",
+    }),
+  ],
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),

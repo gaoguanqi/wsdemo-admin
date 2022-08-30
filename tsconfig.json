@@ -13,10 +13,11 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
+    "types": ["vite-plugin-svg-icons/client"],
     "paths": {
       "@/*": ["src/*"],
     },
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   },
 
   "include": [
